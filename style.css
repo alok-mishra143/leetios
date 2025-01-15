@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    height: 100vh;
+    background-color: #11001a;
+    color: rgb(232, 184, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.container {
+    background-color: #20012e;
+    padding: 20px;
+    border-radius: 15px;
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.user-container {
+    margin-bottom: 20px;
+}
+
+.user-input-container {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+#user-input {
+    width: 70%;
+    padding: 10px;
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 5px;
+    color: rgb(232, 184, 255);
+}
+
+
+#search-btn {
+    padding: 10px 20px;
+    background-color: #440163;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#search-btn:hover {
+    background-color: #650093;
+}
+
+.stats-container {
+    display: none;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.circle {
+    width: 7rem;
+    height: 7rem;
+    border-radius: 50%;
+    border: 4px solid rgba(233, 184, 255, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: conic-gradient(#440163 var(--progress-degree, 0%), #11001a 0%);
+    position: relative;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    transition: background 0.3s ease;
+}
+
+.progress {
+    display: flex;
+    justify-content: space-evenly;
+}
+.medium-progress,.hard-progress ,.easy-progress{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.stats-card {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(233, 184, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.stats-card > div {
+    text-align: center;
+    flex: 1;
+}
+
+@media (max-width: 404px) {
+    .progress {
+        flex-direction: row;
+        gap: 20px;
+    }
+    .circle{
+        width: 5rem;
+        height: 5rem;
+    }
+
+    
+
+    .stats-card {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
